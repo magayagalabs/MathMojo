@@ -6,14 +6,15 @@
 import random
 
 struct constants:
-    # Mathematical constant
+    # Mathematical constants
     var PI: Float64
     var E: Float64
     var goldenRatio: Float64
     var silverRatio: Float64
 
-    # Physical constant
+    # Physical constants
     var speedOfLight: Int
+    var C: Int
 
     fn __init__(inout self):
         self.PI = 3.141592653589793
@@ -21,22 +22,25 @@ struct constants:
         self.goldenRatio = 1.618033988749894
         self.silverRatio = 2.414213562373095
         self.speedOfLight = 299_792_458
+        self.C = 299_792_458
 
     fn __del__(owned self):
         pass
 
-# Positive number
-fn positive(x: Float64) -> Float64:
-    return x
+fn M3L():
 
-# Negative number
-fn negative(x: Float64) -> Float64:
-    return -x
+    # Positive number
+    fn positive(x: Float64) -> Float64:
+        return x
 
-# Square root
-fn sqrt(x: Float64) -> Float64:
-    return x ** 1/2
+    # Negative number
+    fn negative(x: Float64) -> Float64:
+        return -x
 
-# Cube root
-fn cbrt(x: Float64) -> Float64:
-    return x ** 1/3
+    # Square root
+    fn sqrt(x: Float64) -> Float64:
+        return x ** 1/2
+
+    # Cube root
+    fn cbrt(x: Float64) -> Float64:
+        return x ** 1/3
