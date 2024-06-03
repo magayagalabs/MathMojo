@@ -5,6 +5,7 @@
 #
 import random
 
+# Mathematical constants
 struct constants:
     # Mathematical constants
     var PI: Float64
@@ -27,6 +28,7 @@ struct constants:
     fn __del__(owned self):
         pass
 
+# Mathematical functions
 fn M3L():
 
     # Positive number
