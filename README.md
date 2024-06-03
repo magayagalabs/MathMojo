@@ -1,6 +1,6 @@
 # `MathMojo`
 
-`MathMojo` is a library for [mojo](https://www.modular.com/max/mojo) programming language that mathematics, physics, and chemistry.
+`MathMojo` is a library for [mojo](https://www.modular.com/max/mojo) programming language that mathematics like constants, functions, expressions, and part of the science!
 
 ## Copyright
 
