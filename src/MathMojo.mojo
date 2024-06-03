@@ -24,3 +24,9 @@ struct constants:
 
     fn __del__(owned self):
         pass
+
+fn sqrt(x: Float64) -> Float64:
+    return x ** 1/2
+
+fn cbrt(x: Float64) -> Float64:
+    return x ** 1/3
