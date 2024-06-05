@@ -28,8 +28,8 @@ struct constants:
     fn __del__(owned self):
         pass
 
-# Mathematical functions
-fn M3L():
+# Mathematical operations
+fn operations():
 
     # Positive number
     fn positive(x: Float64) -> Float64:
