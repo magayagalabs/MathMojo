@@ -28,21 +28,18 @@ struct constants:
     fn __del__(owned self):
         pass
 
-# Mathematical operations
-fn operations():
+# Positive number
+fn positive(x: Float64) -> Float64:
+    return x
 
-    # Positive number
-    fn positive(x: Float64) -> Float64:
-        return x
+# Negative number
+fn negative(x: Float64) -> Float64:
+    return -x
 
-    # Negative number
-    fn negative(x: Float64) -> Float64:
-        return -x
+# Square root
+fn sqrt(x: Float64) -> Float64:
+    return x ** 1/2
 
-    # Square root
-    fn sqrt(x: Float64) -> Float64:
-        return x ** 1/2
-
-    # Cube root
-    fn cbrt(x: Float64) -> Float64:
+# Cube root
+fn cbrt(x: Float64) -> Float64:
         return x ** 1/3
