@@ -6,13 +6,14 @@
 
 1. Installing `mojo`: You can read the [Get started with Max Engine](https://docs.modular.com/engine/get-started).
    
-   ```
+   ```bash
    $ modular install mojo
+   $ mojo -v
    ```
 
 2. Clone the code mathematical libraries and then directory:
 
-   ```
+   ```bash
    $ git clone https://github.com/magayagalabs/MathMojo.git
    $ cd MathMojo
    ```
