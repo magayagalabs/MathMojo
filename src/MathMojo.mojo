@@ -36,6 +36,14 @@ fn positive(x: Float64) -> Float64:
 fn negative(x: Float64) -> Float64:
     return -x
 
+# Square
+fn sq(x: Float64) -> Float64:
+    return x * x
+
+# Cube
+fn cb(x: Float64) -> Float64:
+    return x * x * x
+
 # Square root
 fn sqrt(x: Float64) -> Float64:
     return x ** 1/2
