@@ -44,10 +44,18 @@ fn sq(x: Float64) -> Float64:
 fn cb(x: Float64) -> Float64:
     return x * x * x
 
+# Quinque
+fn qn(x: Float64) -> Float64:
+    return x * x * x * x * x
+
 # Square root
 fn sqrt(x: Float64) -> Float64:
-    return x ** 1/2
+    return x ** (1/2)
 
 # Cube root
 fn cbrt(x: Float64) -> Float64:
-        return x ** 1/3
+    return x ** (1/3)
+
+# Quinque root
+fn qnrt(x: Float64) -> Float64:
+    return x ** (1/5)
