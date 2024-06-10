@@ -2,7 +2,7 @@
 
 `MathMojo` is a library for [mojo](https://www.modular.com/max/mojo) programming language that mathematics like constants, operations, functions, expressions, and part of the science! It was available for **Linux** 🐧, **macOS** 🍎, and **Windows Subsystem for Linux** 🪟 operating systems!
 
-# Getting Start
+## Getting Start
 1. Downloading and Installing `modular`. You can start in your terminal now.
    
    ```bash
