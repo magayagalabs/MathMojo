@@ -56,6 +56,27 @@ fn sqrt(x: Float64) -> Float64:
 fn cbrt(x: Float64) -> Float64:
     return x ** (1/3)
 
-# Quinque root
+# Quinque root (also known as Fifth root)
 fn qnrt(x: Float64) -> Float64:
     return x ** (1/5)
+
+# Power
+fn pow(a: Float64, b: Int32) -> Float64:
+    # Declare mutable variables
+    var base = a
+    var exponent = b
+    var result: Float64 = 1.0
+
+    if exponent == 0:
+        return 1.0
+    elif exponent < 0:
+        base = 1.0 / base
+        exponent = -exponent
+
+    while exponent > 0:
+        if exponent % 2 == 1:
+            result *= base
+        base *= base
+        exponent //= 2
+
+    return result
