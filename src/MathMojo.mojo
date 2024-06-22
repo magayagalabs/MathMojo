@@ -18,10 +18,20 @@ struct constants:
     var C: Int
 
     fn __init__(inout self):
+        # pi
         self.PI = 3.141592653589793
+
+        # euler's number
         self.E = 2.718281828459045
+
+        # golden ratio or phi
         self.goldenRatio = 1.618033988749894
+        self.phi = 1.618033988749894
+
+        # silver ratio
         self.silverRatio = 2.414213562373095
+
+        # speed of light or C
         self.speedOfLight = 299_792_458
         self.C = 299_792_458
 
