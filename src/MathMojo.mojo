@@ -90,3 +90,78 @@ fn pow(a: Float64, b: Int32) -> Float64:
         exponent //= 2
 
     return result
+
+
+# Exponent
+fn exp(x: Float64) -> Float64:
+    var sum: Float64 = 1.0
+    var term: Float64 = 1.0
+    var n: Int32 = 1
+    while term > 1e-10:  # Stop when term is very small
+        term *= x / Float64(n)
+        sum += term
+        n += 1
+    return sum
+
+# Factorial
+fn factorial(n: Int32) -> Int32:
+    if n < 0:
+        return -1  # Factorial is not defined for negative numbers
+    var result: Int32 = 1
+    var i: Int32 = 1
+    while i <= n:
+        result *= i
+        i += 1
+    return result
+
+# Absolute value (Float64)
+fn abs(x: Float64) -> Float64:
+    if x < 0.0:
+        return -x
+    else:
+        return x
+
+# Absolute value (Int32)
+fn abs(x: Int32) -> Int32:
+    if x < 0.0:
+        return -x
+    else:
+        return x
+
+# Ceil
+fn ceil(x: Float64) -> Float64:
+    var int_part: Int64 = Int64(x)
+    if x > 0.0 and Float64(int_part) != x:
+        int_part += 1
+    return Float64(int_part)
+
+# Floor
+fn floor(x: Float64) -> Float64:
+    var int_part: Int64 = Int64(x)
+    if x < 0.0 and Float64(int_part) != x:
+        int_part -= 1
+    return Float64(int_part)
+
+# Minimum
+fn min(a: Float64, b: Float64) -> Float64:
+    if a < b:
+        return a
+    else:
+        return b
+
+# Maximum
+fn max(a: Float64, b: Float64) -> Float64:
+    if a > b:
+        return a
+    else:
+        return b
+
+# Greatest common divisor (GCD)
+fn gcd(a: Int32, b: Int32) -> Int32:
+    var x: Int32 = abs(a)
+    var y: Int32 = abs(b)
+    while y != 0:
+        var temp = y
+        y = x % y
+        x = temp
+    return x
