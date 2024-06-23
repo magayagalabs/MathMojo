@@ -20,7 +20,7 @@
        print(sqrt(25))
        print(sqrt(196))
    ```
-
+   
 * `NumPy` provides convenient mathematical functions for finding roots like **Python modules**. For example:
 
    ```mojo
@@ -44,7 +44,7 @@
    
    ```bash
    $ modular install mojo
-   $ mojo -v
+   $ mojo -v (v24.3.0 or above)
    ```
 
 3. Clone the code mathematical libraries and then directory:
