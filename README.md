@@ -37,6 +37,7 @@
 1. Downloading and Installing `modular` ([The Modular command line interface](https://docs.modular.com/cli/)). You can start in your terminal now. It was available for Linux, macOS, and WSL for Windows.
    
    ```bash
+   # You can download the modular CLI
    $ curl -s https://get.modular.com | sh -
    ```
    
