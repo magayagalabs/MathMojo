@@ -175,3 +175,29 @@ fn degrees(radians: Float64) -> Float64:
 # Converting degrees into the radians
 fn radians(degrees: Float64) -> Float64:
     return degrees * (constants().PI / 180.0)
+
+# Sine
+fn sin(x: Float64) -> Float64:
+    var term: Float64 = x
+    var sum: Float64 = x
+    var n: Int32 = 1
+    while fabs(term) > 1e-10:
+        term *= -x * x / (2.0 * Float64(n) * (2.0 * Float64(n) + 1.0))
+        sum += term
+        n += 1
+    return sum
+
+# Cosine
+fn cos(x: Float64) -> Float64:
+    var term: Float64 = 1.0
+    var sum: Float64 = 1.0
+    var n: Int32 = 1
+    while fabs(term) > 1e-10:
+        term *= -x * x / (2.0 * Float64(n - 1) * (2.0 * Float64(n) - 1.0))
+        sum += term
+        n += 1
+    return sum
+
+# Tangent
+fn tan(x: Float64) -> Float64:
+    return sin(x) / cos(x)
