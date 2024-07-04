@@ -115,14 +115,14 @@ fn factorial(n: Int32) -> Int32:
     return result
 
 # Absolute value (Float64)
-fn abs(x: Float64) -> Float64:
+fn fabs(x: Float64) -> Float64:
     if x < 0.0:
         return -x
     else:
         return x
 
 # Absolute value (Int32)
-fn abs(x: Int32) -> Int32:
+fn iabs(x: Int32) -> Int32:
     if x < 0.0:
         return -x
     else:
