@@ -158,10 +158,20 @@ fn max(a: Float64, b: Float64) -> Float64:
 
 # Greatest common divisor (GCD)
 fn gcd(a: Int32, b: Int32) -> Int32:
-    var x: Int32 = abs(a)
-    var y: Int32 = abs(b)
+    var x: Int32 = iabs(a)
+    var y: Int32 = iabs(b)
     while y != 0:
         var temp = y
         y = x % y
         x = temp
     return x
+
+# Degrees
+# Converting radians into the degrees
+fn degrees(radians: Float64) -> Float64:
+    return radians * (180.0 / constants().PI)
+
+# Radians
+# Converting degrees into the radians
+fn radians(degrees: Float64) -> Float64:
+    return degrees * (constants().PI / 180.0)
