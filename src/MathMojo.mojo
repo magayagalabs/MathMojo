@@ -178,26 +178,60 @@ fn radians(degrees: Float64) -> Float64:
 
 # Sine
 fn sin(x: Float64) -> Float64:
-    var term: Float64 = x
-    var sum: Float64 = x
-    var n: Int32 = 1
+    var normalized_x = x % (2 * constants().PI)  # Normalize x to range [0, 2π]
+    if normalized_x < -constants().PI:
+        normalized_x += 2 * constants().PI
+    elif normalized_x > constants().PI:
+        normalized_x -= 2 * constants().PI
+
+    var term = x
+    var sum = x
+    var x_squared = x * x
+    var sign = -1
+    var i = 1
+
     while fabs(term) > 1e-10:
-        term *= -x * x / (2.0 * Float64(n) * (2.0 * Float64(n) + 1.0))
-        sum += term
-        n += 1
+        term *= x_squared / ((2 * i) * (2 * i + 1))
+        sum += sign * term
+        sign *= -1
+        i += 1
+
     return sum
 
 # Cosine
 fn cos(x: Float64) -> Float64:
-    var term: Float64 = 1.0
-    var sum: Float64 = 1.0
-    var n: Int32 = 1
+    var normalized_x = x % (2 * constants().PI)  # Normalize x to range [0, 2π]
+    if normalized_x < -constants().PI:
+        normalized_x += 2 * constants().PI
+    elif normalized_x > constants().PI:
+        normalized_x -= 2 * constants().PI
+
+    var term = 1.0
+    var sum = 1.0
+    var x_squared = x * x
+    var sign = -1
+    var i = 1
+
     while fabs(term) > 1e-10:
-        term *= -x * x / (2.0 * Float64(n - 1) * (2.0 * Float64(n) - 1.0))
-        sum += term
-        n += 1
+        term *= x_squared / ((2 * i - 1) * (2 * i))
+        sum += sign * term
+        sign *= -1
+        i += 1
+
     return sum
 
 # Tangent
 fn tan(x: Float64) -> Float64:
     return sin(x) / cos(x)
+
+# Cosecant
+fn csc(x: Float64) -> Float64:
+    return 1 / sin(x)
+
+# Secant
+fn sec(x: Float64) -> Float64:
+    return 1 / cos(x)
+
+# Cotangent
+fn cot(x: Float64) -> Float64:
+    return 1 / tan(x)
