@@ -150,18 +150,20 @@ fn floor(x: Float64) -> Float64:
     return Float64(int_part)
 
 # Minimum
-fn min(a: Float64, b: Float64) -> Float64:
-    if a < b:
-        return a
-    else:
-        return b
+fn min(*args: Float64) -> Float64:
+    var min_value = args[0]
+    for arg in args:
+        if arg < min_value:
+            min_value = arg
+    return min_value
 
 # Maximum
-fn max(a: Float64, b: Float64) -> Float64:
-    if a > b:
-        return a
-    else:
-        return b
+fn max(*args: Float64) -> Float64:
+    var max_value = args[0]
+    for arg in args:
+        if arg > max_value:
+            max_value = arg
+    return max_value
 
 # Greatest common divisor (GCD)
 fn gcd(a: Int32, b: Int32) -> Int32:
