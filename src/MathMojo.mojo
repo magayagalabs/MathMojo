@@ -47,11 +47,29 @@ fn negative(x: Float64) -> Float64:
     return -x
 
 # Addition
-fn add(*values: Float64) -> Float64:
-  var add: Float64 = 0
-  for value in values:
-    add = add+value
-  return add
+fn add(*numbers: Float64) -> Float64:
+    var sum: Float64 = 0
+    for num in numbers:
+        sum += num
+    return sum
+
+# Subtraction
+fn subtract(*numbers: Float64) -> Float64:
+    if len(numbers) == 0:
+        return 0
+    var result: Float64 = numbers[0]
+    for i in range(1, len(numbers)):
+        result -= numbers[i]
+    return result
+
+# Multiplication
+fn multiply(*numbers: Float64) -> Float64:
+    if len(numbers) == 0:
+        return 1
+    var result: Float64 = 1
+    for num in numbers:
+        result *= num
+    return result
 
 # Square
 fn sq(x: Float64) -> Float64:
@@ -136,18 +154,20 @@ fn iabs(x: Int32) -> Int32:
         return x
 
 # Ceil
-fn ceil(x: Float64) -> Float64:
-    var int_part: Int64 = Int64(x)
-    if x > 0.0 and Float64(int_part) != x:
-        int_part += 1
-    return Float64(int_part)
+fn ceil(x: Float64) -> Int:
+    var integer_part = int(x)
+    if x > 0 and x > integer_part:
+        return integer_part + 1
+    else:
+        return integer_part
 
 # Floor
-fn floor(x: Float64) -> Float64:
-    var int_part: Int64 = Int64(x)
-    if x < 0.0 and Float64(int_part) != x:
-        int_part -= 1
-    return Float64(int_part)
+fn floor(x: Float64) -> Int:
+    var integer_part = int(x)
+    if x < 0 and x < integer_part:
+        return integer_part - 1
+    else:
+        return integer_part
 
 # Minimum
 fn min(*args: Float64) -> Float64:
