@@ -71,6 +71,18 @@ fn multiply(*numbers: Float64) -> Float64:
         result *= num
     return result
 
+# Division
+fn divide(*numbers: Float64) -> Float64:
+    if len(numbers) == 0:
+        return 1
+    var result: Float64 = numbers[0]
+    for i in range(1, len(numbers)):
+        if numbers[i] == 0:
+            print("Error: Division by zero")
+            return 0  # or another sentinel value
+        result /= numbers[i]
+    return result
+
 # Square
 fn sq(x: Float64) -> Float64:
     return x * x
