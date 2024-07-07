@@ -46,6 +46,13 @@ fn positive(x: Float64) -> Float64:
 fn negative(x: Float64) -> Float64:
     return -x
 
+# Addition
+fn add(*values: Float64) -> Float64:
+  var add: Float64 = 0
+  for value in values:
+    add = add+value
+  return add
+
 # Square
 fn sq(x: Float64) -> Float64:
     return x * x
