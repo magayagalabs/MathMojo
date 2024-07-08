@@ -14,6 +14,6 @@ fn main():
     var b = arccos(number)
     var c = arctan(number)
 
-    print("arcsin of 10 degrees:", a)
-    print("arccos of 10 degrees:", b)
-    print("arctan of 10 degrees:", c)
+    print("arcsin of 1.0 degrees:", a)
+    print("arccos of 1.0 degrees:", b)
+    print("arctan of 1.0 degrees:", c)
