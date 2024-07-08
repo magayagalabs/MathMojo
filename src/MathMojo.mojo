@@ -212,6 +212,13 @@ fn floor(x: Float64) -> Int:
     else:
         return integer_part
 
+# Truncable
+fn trunc(x: Float64) -> Int32:
+    if x >= 0:
+        return floor(x)
+    else:
+        return ceil(x)
+
 # Minimum
 fn min(*args: Float64) -> Float64:
     var min_value = args[0]
