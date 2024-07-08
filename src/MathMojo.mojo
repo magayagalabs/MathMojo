@@ -157,6 +157,17 @@ fn exp(x: Float64) -> Float64:
         n += 1
     return sum
 
+# Exponential function with base 2
+fn exp2(x: Float64) -> Float64:
+    var result = 1.0
+    var term = 1.0
+    var i = 1
+    while fabs(term) > 1e-10:
+        term *= (x * ln(2)) / i
+        result += term
+        i += 1
+    return result
+
 # Factorial
 fn factorial(n: Int32) -> Int32:
     if n < 0:
