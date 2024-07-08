@@ -128,6 +128,23 @@ fn pow(a: Float64, b: Int32) -> Float64:
 
     return result
 
+# Natural logarithm
+fn ln(x: Float64) -> Float64:
+    if x <= 0:
+        return Float64('nan')  # Undefined for non-positive numbers
+    
+    var y = (x - 1) / (x + 1)
+    var y_squared = y * y
+    var term = y
+    var sum = y
+    var i = 1
+
+    while fabs(term) > 1e-10:
+        term *= y_squared * (2 * i - 1) / (2 * i + 1)
+        sum += term
+        i += 1
+
+    return 2 * sum
 
 # Exponent
 fn exp(x: Float64) -> Float64:
@@ -150,6 +167,20 @@ fn factorial(n: Int32) -> Int32:
         result *= i
         i += 1
     return result
+
+# Combinations
+fn comb(n: Int, r: Int32) -> Int32:
+    if r > n:
+        return 0
+    if r == 0 or r == n:
+        return 1
+    return factorial(n) // (factorial(r) * factorial(n - r))
+
+# Copysign
+fn copysign(x: Float64, y: Float64) -> Float64:
+    if (x < 0 and y > 0) or (x > 0 and y < 0):
+        return -x
+    return x
 
 # Absolute value (Float64)
 fn fabs(x: Float64) -> Float64:
