@@ -276,3 +276,93 @@ fn sec(x: Float64) -> Float64:
 # Cotangent
 fn cot(x: Float64) -> Float64:
     return 1 / tan(x)
+
+# Inverse sine
+fn arcsin(x: Float64) -> Float64:
+    if x < -1.0 or x > 1.0:
+        return Float64('nan')  # Domain error
+    
+    var guess = x
+    var epsilon = 1e-10
+    var max_iterations = 100
+    var i = 0
+
+    while i < max_iterations:
+        var next_guess = guess - (sin(guess) - x) / cos(guess)
+        if fabs(next_guess - guess) < epsilon:
+            return next_guess
+        guess = next_guess
+        i += 1
+
+    return guess  # Return best guess if max iterations reached
+
+# Inverse cosine
+fn arccos(x: Float64) -> Float64:
+    return constants().PI / 2 - arcsin(x)
+
+# Inverse tangent
+fn arctan(x: Float64) -> Float64:
+    var guess = x / (1.0 + sqrt(1.0 + x * x))
+    var epsilon = 1e-10
+    var max_iterations = 100
+    var i = 0
+
+    while i < max_iterations:
+        var next_guess = guess - (tan(guess) - x) / (1 + tan(guess) * tan(guess))
+        if fabs(next_guess - guess) < epsilon:
+            return next_guess
+        guess = next_guess
+        i += 1
+
+    return guess  # Return best guess if max iterations reached
+
+# Inverse tangent2
+fn arctan2(y: Float64, x: Float64) -> Float64:
+    if x > 0:
+        return arctan(y / x)
+    elif x < 0:
+        if y >= 0:
+            return arctan(y / x) + constants().PI
+        else:
+            return arctan(y / x) - constants().PI
+    else:  # x == 0
+        if y > 0:
+            return constants().PI / 2
+        elif y < 0:
+            return -constants().PI / 2
+        else:  # y == 0
+            return Float64('nan')  # Undefined
+
+# Hyperbolic Sine
+fn sinh(x: Float64) -> Float64:
+    return (exp(x) - exp(-x)) / 2
+
+# Hyperbolic Cosine
+fn cosh(x: Float64) -> Float64:
+    return (exp(x) + exp(-x)) / 2
+
+# Hyperbolic Tangent
+fn tanh(x: Float64) -> Float64:
+    if x > 19.1:
+        return 1.0  # Approaches 1 for large positive x
+    elif x < -19.1:
+        return -1.0  # Approaches -1 for large negative x
+    var e_x = exp(x)
+    var e_neg_x = 1 / e_x  # More efficient than calculating exp(-x) separately
+    return (e_x - e_neg_x) / (e_x + e_neg_x)
+
+# Inverse Hyperbolic Sine
+fn arcsinh(x: Float64) -> Float64:
+    return ln(x + sqrt(x * x + 1))
+
+# Inverse Hyperbolic Cosine
+fn arccosh(x: Float64) -> Float64:
+    if x < 1:
+        return Float64('nan')  # Undefined for x < 1
+    return ln(x + sqrt(x * x - 1))
+
+# Inverse Hyperbolic Tangent
+fn arctanh(x: Float64) -> Float64:
+    if x <= -1 or x >= 1:
+        return Float64('nan')  # Undefined for |x| >= 1
+    return 0.5 * ln((1 + x) / (1 - x))
