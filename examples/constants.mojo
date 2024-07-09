@@ -6,13 +6,14 @@
 from MathMojo import constants
 
 fn main():
-    var constant = constants()
-
     # Mathematical constants
-    print(constant.PI)
-    print(constant.E)
-    print(constant.goldenRatio)
-    print(constant.silverRatio)
+    print(constants().PI)
+    print(constants().tau)
+    print(constants().E)
+    print(constants().goldenRatio) # goldenRatio or phi
+    print(constants().silverRatio)
 
     # Physical constants
-    print(constant.C)
+    print(constants().C) # speedOfLight or C
+    print(constants().G) # gravitationalConstant or G
+    print(constants().e) # elementaryCharge or e
