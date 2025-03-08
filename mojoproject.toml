@@ -1,0 +1,10 @@
+[project]
+channels = ["https://conda.modular.com/max-nightly", "https://conda.modular.com/max", "https://repo.prefix.dev/modular-community", "conda-forge"]
+name = "MathMojo"
+platforms = ["osx-arm64", "linux-64"]
+version = "0.0.1"
+
+[tasks]
+
+[dependencies]
+max = ">=25.2.0.dev2025030705,<26"
