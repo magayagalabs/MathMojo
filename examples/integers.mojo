@@ -3,7 +3,7 @@
 # is the similar to the M3L (Magayaga Mathematical Library)
 # Copyright (c) 2024 Cyril John Magayaga
 #
-from MathMojo import negative, positive
+from mathmojo import negative, positive
 
 fn main():
     # Negative numbers

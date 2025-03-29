@@ -3,7 +3,7 @@
 # is the similar to the M3L (Magayaga Mathematical Library)
 # Copyright (c) 2024 Cyril John Magayaga
 #
-from MathMojo import sinh, cosh, tanh
+from mathmojo import sinh, cosh, tanh
 
 fn main():
     # Number

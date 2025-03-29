@@ -3,7 +3,7 @@
 # is the similar to the M3L (Magayaga Mathematical Library)
 # Copyright (c) 2024 Cyril John Magayaga
 #
-from MathMojo import sqrt, cbrt, qnrt
+from mathmojo import sqrt, cbrt, qnrt
 
 fn main():
     # Square roots

@@ -3,7 +3,7 @@
 # is the similar to the M3L (Magayaga Mathematical Library)
 # Copyright (c) 2024 Cyril John Magayaga
 #
-from MathMojo import add
+from mathmojo import add
 
 fn main():
     # Addition
