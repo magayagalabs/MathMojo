@@ -13,7 +13,7 @@
 * `MathMojo` provides convenient mathematical functions for finding roots. For example:
 
    ```mojo
-   from MathMojo import sqrt
+   from mathmojo import sqrt
 
    fn main():
        # Square roots
