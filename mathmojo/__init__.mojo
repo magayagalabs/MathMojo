@@ -4,6 +4,7 @@
 # Copyright (c) 2024-2025 Cyril John Magayaga
 #
 import random
+from mathmojo.chemistry import *
 
 # Mathematical constants
 struct constants:
