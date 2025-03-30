@@ -19,18 +19,6 @@ Please include the requested information listed below (as much as you can provid
 * Proof-of-concept or exploit code (if possible)
 * Impact of the issue, including how an attacker might exploit the issue
 
-## Supported Versions
-
-Use this section to tell people about which versions of your project are currently being supported with security updates.
-
-| Version | Supported | Notes | Original Author(s) |
-|:-:|:-:|:-:|:-:|
-| name1 or name_1 | :white_check_mark: Corrected | This is codename or App name, not a real name | GitHub |
-| 1_name or 1name | :x: Unacceptable | | GitHub
-| v1.0 or v1, and r75 | :white_check_mark: Corrected | This is version, remainder version or codename, not a real or last name | Cyril John Magayaga |
-| v.1.0, 1v, r.75, 75r, or 1.0.v | :x: Unacceptable | | Cyril John Magayaga
-| Aug 5 or August 5 | :white_check_mark: Corrected | Do not add a dot to an abbreviated month. Months should be capitalized. Do not use ordinals (1st, 2nd, 3rd, etc.). Do not use these formats. Do not zero-pad day. | Wikipedia 
-
 ## Reporting a Vulnerability
 
 Use this section to tell people how to report a vulnerability.
