@@ -5,6 +5,7 @@
 #
 import random
 from mathmojo.chemistry import *
+from mathmojo.statistics import *
 
 # Mathematical constants
 struct constants:
