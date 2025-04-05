@@ -3,6 +3,8 @@
 # Copyright (c) 2025 Cyril John Magayaga
 #
 
+from mathmojo.sort import *
+
 # Mean
 fn mean(*args: Float64) -> Float64:
     var total: Float64 = 0.0
@@ -12,25 +14,14 @@ fn mean(*args: Float64) -> Float64:
         count += 1
     return total / count
 
-# Bubble Sort
-fn bubble_sort(mut arr: List[Float64]) -> None:
-    var n = len(arr)
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if arr[j] > arr[j + 1]:
-                # Swap elements
-                var temp = arr[j]
-                arr[j] = arr[j + 1]
-                arr[j + 1] = temp
-
 # Median
 fn median(*args: Float64) -> Float64:
     # Copy the variadic arguments into a mutable list
     var arr: List[Float64] = List[Float64]()
     for value in args:
         arr.append(value)
-    # Sort the array using bubble_sort
-    bubble_sort(arr)
+    # Sort the array using block sort
+    block_sort(arr)
     var n = len(arr)
     if n % 2 == 1:
         # Odd number of elements: return the middle element
@@ -49,8 +40,8 @@ fn lmedian(data: List[Int]) raises -> Float64:
     for i in range(len(data)):
         float_data.append(Float64(data[i]))
     
-    # Sort the data using bubble sort
-    bubble_sort(float_data)
+    # Sort the data using block sort
+    block_sort(float_data)
     
     var n = len(float_data)
     
