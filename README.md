@@ -38,6 +38,13 @@
 ### Modular (v25 and above)
 1. Downloading and Installing `magic` ([Modular Magic package manager and virtual environment manager](https://docs.modular.com/magic/)). Learn more please. 
 
+2. Clone the code mathematical libraries and then directory:
+
+   ```bash
+   $ git clone https://github.com/magayagalabs/MathMojo.git
+   $ cd MathMojo
+   ```
+   
 ### Modular (v24)
 1. Downloading and Installing `modular` ([The Modular command line interface](https://docs.modular.com/cli/)). You can start in your terminal now. It was available for Linux, macOS, and WSL for Windows.
    
