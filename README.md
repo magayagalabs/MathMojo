@@ -34,6 +34,11 @@
    ```
 
 ## Getting Start
+
+### Modular (v25 and above)
+1. Downloading and Installing `magic` ([Modular Magic package manager and virtual environment manager](https://docs.modular.com/magic/)). Learn more please. 
+
+### Modular (v24)
 1. Downloading and Installing `modular` ([The Modular command line interface](https://docs.modular.com/cli/)). You can start in your terminal now. It was available for Linux, macOS, and WSL for Windows.
    
    ```bash
