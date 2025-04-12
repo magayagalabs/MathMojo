@@ -5,6 +5,8 @@
 #
 import random
 from mathmojo.chemistry import *
+from mathmojo.probability import *
+from mathmojo.sort import *
 from mathmojo.statistics import *
 
 # Mathematical constants
