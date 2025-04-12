@@ -35,12 +35,13 @@
 
    ```mojo
    from python import Python
-   let np = Python.import_module("numpy")
 
-   fn main():
+   def main():
+       Python.add_to_path("path/to/module")
+       np = Python.import_module("numpy")
        # Square roots
        print(np.sqrt(25))
-       print(np.sqrt(194))
+       print(np.sqrt(196))
    ```
 
 ## Getting Start
