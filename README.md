@@ -11,6 +11,7 @@
 **MathMojo** currently has the following features:
 - [x] `mathmojo`
 - [x] `mathmojo.chemistry`
+- [x] `mathmojo.probability`
 - [x] `mathmojo.sort`
 - [x] `mathmojo.statistics`
 
