@@ -6,6 +6,14 @@
 
 `MathMojo` is a library for [mojo](https://www.modular.com/max/mojo) programming language that mathematics like constants, operations, functions, expressions, and part of the science! It was available for **Linux** 🐧, **macOS** 🍎, and **Windows Subsystem for Linux** 🪟 operating systems!
 
+## MathMojo's Features
+
+**MathMojo** currently has the following features:
+- [x] `mathmojo`
+- [x] `mathmojo.chemistry`
+- [x] `mathmojo.sort`
+- [x] `mathmojo.statistics`
+
 ## Examples
 
 ### Square roots
