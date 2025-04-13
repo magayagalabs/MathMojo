@@ -10,7 +10,7 @@
 
 **MathMojo** currently has the following features:
 - [x] `mathmojo`
-- [ ] `mathmojo.calculus` (Wait!)
+- [x] `mathmojo.calculus`
 - [x] `mathmojo.chemistry`
 - [x] `mathmojo.probability`
 - [x] `mathmojo.sort`
