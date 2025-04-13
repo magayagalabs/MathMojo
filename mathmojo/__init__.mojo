@@ -4,6 +4,7 @@
 # Copyright (c) 2024-2025 Cyril John Magayaga
 #
 import random
+from mathmojo.calculus import *
 from mathmojo.chemistry import *
 from mathmojo.probability import *
 from mathmojo.sort import *
