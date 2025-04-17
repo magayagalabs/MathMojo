@@ -4,6 +4,7 @@
    </a>
 </p>
 
+# [MathMojo](https://github.com/magayagalabs/MathMojo) &middot; `Mathematical Library! 😎`
 `MathMojo` is a library for [mojo](https://www.modular.com/max/mojo) programming language that mathematics like constants, operations, functions, expressions, and part of the science! It was available for **Linux** 🐧, **macOS** 🍎, and **Windows Subsystem for Linux** 🪟 operating systems!
 
 ## MathMojo's Features
