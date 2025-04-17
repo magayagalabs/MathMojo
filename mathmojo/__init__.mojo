@@ -156,6 +156,20 @@ fn cbrt(x: Float64) -> Float64:
 fn qnrt(x: Float64) -> Float64:
     return x ** (1/5)
 
+# Remainder
+fn remainder(a: Int32, b: Int32) raises -> Int32:
+    if b == 0:
+        print("Error: Division by zero")
+        return 0  # or raise an error
+    return a % b
+
+# Reciprocal
+fn reciprocal(x: Float64) raises -> Float64:
+    if x == 0.0:
+        print("Error: Division by zero")
+        return Float64("inf")  # or Float64("nan"), depending on your design
+    return 1.0 / x
+
 # Power
 fn pow(a: Float64, b: Int32) -> Float64:
     # Declare mutable variables
@@ -231,14 +245,6 @@ fn factorial(n: Int32) -> Int32:
         i += 1
     return result
 
-# Combinations
-fn comb(n: Int, r: Int32) -> Int32:
-    if r > n:
-        return 0
-    if r == 0 or r == n:
-        return 1
-    return factorial(n) // (factorial(r) * factorial(n - r))
-
 # Copysign
 fn copysign(x: Float64, y: Float64) -> Float64:
     if (x < 0 and y > 0) or (x > 0 and y < 0):
@@ -307,6 +313,12 @@ fn gcd(a: Int32, b: Int32) -> Int32:
         y = x % y
         x = temp
     return x
+
+# Least Common Multiple (LCM)
+fn lcm(a: Int32, b: Int32) -> Int32:
+    if a == 0 or b == 0:
+        return 0
+    return iabs(a * b) // gcd(a, b)
 
 # Degrees
 # Converting radians into the degrees
@@ -476,3 +488,29 @@ fn round(number: Float64, decimals: Int = 0) -> Float64:
         return Float64(Int(number * factor + 0.5)) / factor
     else:
         return Float64(Int(number * factor - 0.5)) / factor
+
+# Hypotenuse (Pythagorean theorem)
+fn hypot(x: Float64, y: Float64) raises -> Float64:
+    return sqrt(sq(x) + sq(y))
+
+# Logarithm
+fn log(x: Float64, base: Float64) raises -> Float64:
+    if x <= 0 or base <= 0 or base == 1:
+        return Float64("nan")
+    return ln(x) / ln(base)
+
+# Base-10 Logarithm of x
+fn log10(x: Float64) raises -> Float64:
+    return log(x, 10)
+
+# Base-2 Logarithm of x
+fn log2(x: Float64) raises -> Float64:
+    return log(x, 2)
+
+# Clamp
+fn clamp(n: Float64, a: Float64, b: Float64) -> Float64:
+    if n < a:
+        return a
+    elif n > b:
+        return b
+    return n
