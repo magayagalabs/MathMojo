@@ -1,9 +1,10 @@
 #
-# MathMojo Statistics - Statistics Mathematicial Library for Mojo programming language 🔥
-# Copyright (c) 2025 Cyril John Magayaga
+# MathMojo Statistics - Statistics Mathematical Library for Mojo programming language 🔥
+# Copyright (c) 2025-2026 Cyril John Magayaga
 #
 
 from mathmojo.sort import *
+from mathmojo import *
 
 # Mean
 fn mean(*args: Float64) -> Float64:
@@ -116,3 +117,31 @@ fn srange(*args: Float64) -> Float64:
     
     # Calculate the range (highest - lowest)
     return max_value - min_value
+
+# Variance
+fn variance(arr: DynamicVector[Float64], ddof: Int = 0) -> Float64:
+    """
+    Compute variance (population or sample)
+    ddof = 0  → population variance (÷ n)
+    ddof = 1  → sample variance     (÷ (n-1))
+    """
+    let n = arr.size
+    if n <= ddof:
+        return 0.0
+    
+    let mu = mean(arr)
+    
+    var sum_sq_diff: Float64 = 0.0
+    for i in range(n):
+        let diff = arr[i] - mu
+        sum_sq_diff += diff * diff
+    
+    let divisor = Float64(n - ddof)
+    return sum_sq_diff / divisor
+
+# Standard Deviation
+fn std(arr: DynamicVector[Float64], ddof: Int = 0) -> Float64:
+    """
+    Compute standard deviation using the same ddof convention as variance
+    """
+    return sqrt(variance(arr, ddof))
