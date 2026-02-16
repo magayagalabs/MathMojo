@@ -1,7 +1,7 @@
 #
 # MathMojo - Mathematical Library for Mojo programming language 🔥
 # is the similar to the M3L (Magayaga Mathematical Library)
-# Copyright (c) 2024-2025 Cyril John Magayaga
+# Copyright (c) 2024-2026 Cyril John Magayaga
 #
 import random
 from mathmojo.calculus import *
@@ -155,6 +155,11 @@ fn cbrt(x: Float64) -> Float64:
 # Quinque root (also known as Fifth root)
 fn qnrt(x: Float64) -> Float64:
     return x ** (1/5)
+
+# Hypot (short for Hypotenuse)
+# It computes the square root of the sum of the squares of two given numbers
+fn hypot(x: Float64, y: Float64) raises -> Float64:
+    return sqrt((x * x) + (y * y))
 
 # Remainder
 fn remainder(a: Int32, b: Int32) raises -> Int32:
