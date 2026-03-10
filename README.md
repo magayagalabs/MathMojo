@@ -14,7 +14,7 @@
 - [x] `mathmojo`
 - [x] `mathmojo.calculus`
 - [x] `mathmojo.chemistry`
-- [ ] `mathmojo.metric_prefix` (Wait!)
+- [ ] `mathmojo.metric_prefixes` (Wait!)
 - [x] `mathmojo.probability`
 - [x] `mathmojo.sort`
 - [x] `mathmojo.statistics`
